@@ -1,0 +1,23 @@
+pip install --upgrade google-api-python-client
+
+/* Updates value (cell) in google spreadsheet
+/* https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/update
+/* https://developers.google.com/sheets/api/samples/writing#write_a_single_range
+/* https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets/request#updatecellsrequest
+
+
+
+PUT https://sheets.googleapis.com/v4/spreadsheets/17FjDjE-bq1V3ceUVPFvfT85KlwfFnxbs46Au3b4xysc/values/lookup!A2:A3?valueInputOption=USER_ENTERED
+
+{
+  "range": "lookup!A2:A3",
+  "majorDimension": "ROWS",
+  "values": [
+    [
+      "@kcu"
+    ],
+    [
+      null
+    ],
+  ]
+}
